@@ -17,8 +17,15 @@ int main(int argc, char** argv) {
   Isometry3d T1w(q1), T2w(q2);
   T1w.pretranslate(t1);
   T2w.pretranslate(t2);
+  Isometry3d T3w(q1);
+  T3w.translate(t1);
+  cout << "T3w : \n" << T3w.matrix() << endl;
 
   Vector3d p2 = T2w * T1w.inverse() * p1;
+  cout << "T2w : \n" << T2w.matrix() << endl;
+  cout << "T1w : \n" << T1w.matrix() << endl;
+  cout << "T1w.inverse : \n" << T1w.inverse().matrix() << endl;
+
   cout << endl << p2.transpose() << endl;
   return 0;
 }

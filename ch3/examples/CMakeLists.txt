@@ -1,5 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+project(chapter3)
+
 include_directories("/usr/include/eigen3")
-add_executable(coordinateTransform coordinateTransform.cpp)
+# add_executable(coordinateTransform coordinateTransform.cpp)
 
 find_package(Pangolin REQUIRED)
 include_directories(${Pangolin_INCLUDE_DIRS})
