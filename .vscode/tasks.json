@@ -11,6 +11,17 @@
             "problemMatcher": [
                 "$gcc"
             ]
+        },
+        {
+            "type": "shell",
+            "label": "c++单文件编译",
+            "command": "sh -x ${workspaceFolder}/.vscode/buildSingleFile.sh ${file} ${workspaceFolder}/exe/${fileBasenameNoExtension}",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ]
 }
